@@ -5,6 +5,40 @@ $size: 400px;
 $gap: 20px;
 $deg: 50deg;
 
+header {
+	width: 88vw;
+	height: 120px;
+	position: absolute;
+	top: 0;
+	left: 6vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 3;
+
+	h1 {
+		font: bold 24px/1 'arial';
+		color: #777;
+		transition: 0.5s;
+	}
+	#gnb {
+		display: flex;
+		gap: 70px;
+		font: 14px/1 'arial';
+		letter-spacing: 1px;
+		color: #888;
+	}
+	.fa-bars {
+		font-size: 24px;
+		color: #999;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		display: none;
+	}
+}
+
 figure {
 	width: 100%;
 	height: 100vh;
@@ -303,6 +337,60 @@ figure {
 		.close {
 			opacity: 1;
 			transform: translateX(0px);
+		}
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	header {
+		#gnb {
+			display: none;
+		}
+		.fa-bars {
+			display: block;
+		}
+	}
+
+	figure {
+		.banner {
+			ul {
+				li:nth-of-type(4) {
+					transform: translateX(0px) scale(0.7);
+
+					h2 {
+						top: -20vh;
+						font-size: 37vw;
+					}
+					a {
+						width: 100%;
+						bottom: -25%;
+					}
+				}
+			}
+		}
+
+		.btns {
+			bottom: 6vh;
+			width: 100%;
+			justify-content: center;
+			gap: 20px;
+			right: 0vw;
+		}
+
+		.pop {
+			width: 80vw;
+			left: -80vw;
+
+			h2 {
+				font-size: 20vw;
+			}
+			p {
+				font-size: 16px;
+				letter-spacing: 0px;
+			}
+			.close {
+				width: 100%;
+			}
 		}
 	}
 }
