@@ -172,6 +172,9 @@ figure .banner ul li:nth-of-type(4) a span {
   opacity: 1;
   text-indent: 0px;
 }
+figure .banner ul li:nth-of-type(4) a.off {
+  opacity: 0;
+}
 figure .banner ul li:nth-of-type(5) {
   transform: translateX(440px) scale(0.6);
 }
@@ -219,6 +222,65 @@ figure .btns > * {
 figure .btns > *:hover {
   width: 150px;
   background: #555;
+}
+figure .btns.off {
+  right: 5vw;
+  opacity: 0;
+}
+figure .pop {
+  width: 50vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -50vw;
+  background: rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(10px);
+  padding: 22vh 5vw 10vh 6vw;
+  transition: 0.5s 0s;
+}
+figure .pop h2 {
+  font: 12vw/1 "anton";
+  color: #fff;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 1s 0.3s;
+}
+figure .pop p {
+  font: 22px/1.2 "arial";
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: 0.5s 0.8s;
+}
+figure .pop .close {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  font: bold 14px/1 "arial";
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+figure .pop .close:hover {
+  background: #fff;
+  color: #777;
+}
+figure .pop.on {
+  left: 0;
+}
+figure .pop.on h2,
+figure .pop.on p,
+figure .pop.on .close {
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 /*# sourceMappingURL=style.css.map */
